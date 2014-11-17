@@ -1,0 +1,51 @@
+{
+  "name": "giffer-desktop",
+  "version": "0.0.0",
+  "description": "Cross-platform desktop app for giffer",
+  "main": "index.html",
+  "scripts": {
+    "test": "tap test/test-*.js",
+    "start": "nodewebkit"
+  },
+  "keywords": [
+    "giffer",
+    "desktop",
+    "gifs"
+  ],
+  "author": "Max Gfeller <max.gfeller@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "attr-bind": "^3.1.0",
+    "attractor": "^2.0.0",
+    "bootstrap": "^3.3.1",
+    "giffer": "^2.0.2",
+    "giffer-adapter-9gag": "^1.1.5",
+    "giffer-adapter-reddit": "^0.9.0",
+    "giffer-validator": "^1.0.3",
+    "jquery": "^2.1.1",
+    "level-js": "^2.1.6",
+    "level-sublevel": "^6.3.15",
+    "levelup": "^0.19.0",
+    "nw-open-dir": "^1.0.0",
+    "nw-open-file": "^1.0.3",
+    "observ": "^0.2.0"
+  },
+  "devDependencies": {
+    "node-webkit-builder": "^0.3.0",
+    "nodewebkit": "^0.10.5"
+  },
+  "window": {
+    "title": "Giffer Desktop",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600,
+    "single-instance": true,
+    "show_in_taskbar": true
+  }
+}

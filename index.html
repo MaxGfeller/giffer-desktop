@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Giffer Desktop</title>
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <span class="navbar-brand">Giffer Desktop</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top: 60px;">
+    <div class="alert alert-info" role="alert">With giffer you can download a shitload of awesome-as-fuck gifs!!! How fucking great is that!?</div>
+
+    <table class="table">
+      <tr>
+        <td>Output Directory</td>
+        <td><span id="output-dir">/tmp</span><br><button id="select-output-dir" class="btn btn-sm btn-primary">Select folder</button>
+      </tr>
+      <tr>
+        <td>Adapters</td>
+        <td>
+          <ul id="adapters">
+          </ul>
+          <button class="btn btn-sm" onclick="$('#add-adapter').modal()">Add adapter</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Modals and stuff -->
+    <div class="modal fade" id="add-adapter">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Add adapter...</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="btn-group" role="group" aria-label="adapter-type">
+                      <button type="button" class="btn btn-default">Reddit</button>
+                      <button type="button" class="btn btn-default" onclick="$('#select-9gag').show()">9gag</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="adapter-type" id="select-9gag" style="display: none;">
+                      <button type="button" class="btn btn-default">Hot</button>
+                      <button type="button" class="btn btn-default">Trending</button>
+                      <button type="button" class="btn btn-default">Fresh</button>
+                    </div>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="open-library" disabled="true">Add adapter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script type="text/javascript">
+    global.window = window;
+    global.document = window.document;
+    global.location = location;
+    global.history = history;
+  </script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
